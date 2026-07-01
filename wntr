@@ -14,7 +14,7 @@ _G.GAGConfig = _G.GAGConfig or {
         ["Minimum Seed"] = "Venus Fly Trap",                -- e.g. "Bamboo"  (never BUY/PLANT a seed cheaper than this tier — stops it filling with Carrot/Strawberry/Blueberry junk. "" = no floor, fill with anything)
         ["Layout"]      = "compact",          -- "compact" / "spread"
         ["Don't Plant"] = { "Rainbow", "Tes1", "Mega", "Dragon's Breath", "Moon Bloom", "Hypno Bloom" },                -- e.g. { "Carrot", "Green Bean" }
-        ["Don't Buy"]   = {},                 -- e.g. { "Mango", "Coconut" }
+        ["Don't Buy"]   = { Strawberry", "Blueberry", "Tulip", "Tomato", "Apple", "Corn" },                 -- e.g. { "Mango", "Coconut" }
         ["Keep Seeds"]  = {
             ["Dragon's Breath"] = 55, ["Moon Bloom"] = 54, ["Hypno Bloom"] = 55,
             ["Gold"] = 55, ["Rainbow"] = 55, ["Mega"] = 55,
