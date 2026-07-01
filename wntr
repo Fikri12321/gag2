@@ -71,8 +71,8 @@ _G.GAGConfig = _G.GAGConfig or {
         ["Teleport"]              = true,   -- true / false  (on = grab pets + event seeds by TELEPORTING straight onto each one and fast-firing — much faster than slide/walk. Separate from Fast Travel)
     },
     ["Friends"] = {
-        ["Auto Accept"] = false,              -- true / false  (accept incoming friend requests from players in the server)
-        ["Auto Send"]   = false,              -- true / false  (send friend requests to players in the server — some accounts must be friends to mail/trade)
+        ["Auto Accept"] = true,              -- true / false  (accept incoming friend requests from players in the server)
+        ["Auto Send"]   = true,              -- true / false  (send friend requests to players in the server — some accounts must be friends to mail/trade)
     },
     ["Performance"] = {
         ["FPS Cap"]              = 30,        -- number (0 = uncapped; also the farm's logic/movement rate)
