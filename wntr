@@ -9,22 +9,22 @@ _G.GAGConfig = _G.GAGConfig or {
     },
     ["Planting"] = {
         ["Auto Plant"]  = true,               -- true / false  (false = never buy/plant; also stops expand/replace)
-        ["Plant Plan"]  = {},                 -- e.g. { Apple = 50, ["Dragon Fruit"] = 20 }  (keep N planted, then auto-fill)
+        ["Plant Plan"]  = { gold = 100 },                 -- e.g. { Apple = 50, ["Dragon Fruit"] = 20 }  (keep N planted, then auto-fill)
         ["Only Plant"]  = {},                 -- e.g. { "Bamboo", "Apple" }  (plant ONLY these)
-        ["Minimum Seed"] = "",                -- e.g. "Bamboo"  (never BUY/PLANT a seed cheaper than this tier — stops it filling with Carrot/Strawberry/Blueberry junk. "" = no floor, fill with anything)
+        ["Minimum Seed"] = "Venus Fly Trap",                -- e.g. "Bamboo"  (never BUY/PLANT a seed cheaper than this tier — stops it filling with Carrot/Strawberry/Blueberry junk. "" = no floor, fill with anything)
         ["Layout"]      = "compact",          -- "compact" / "spread"
-        ["Don't Plant"] = { "Rainbow", "Gold", "Mega", "Dragon's Breath", "Moon Bloom", "Venom Spitter" },                 -- e.g. { "Carrot", "Green Bean" }
-        ["Don't Buy"]   = { "Strawberry", "Blueberry", "Tulip", "Tomato", "Apple", "Corn", "Cactus", "Pineapple", "Green Bean", "Banana", "Grape", "Coconut", "Mango", "Dragon Fruit", "Acorn", "Cherry", "Sunflower" },                 -- e.g. { "Mango", "Coconut" }
-        ["Keep Seeds"]  = {                   -- e.g. { ["Moon Bloom"] = 5, Gold = 15 }  (keep N UNPLANTED)
-            ["Dragon's Breath"] = 5, ["Moon Bloom"] = 5, ["Venom Spitter"] = 5,
-            ["Gold"] = 15, ["Rainbow"] = 5, ["Mega"] = 5,
-        },
+        ["Don't Plant"] = { "Rainbow", "Gold", "Mega", "Dragon's Breath", "Moon Bloom", "Hypno Bloom" },                -- e.g. { "Carrot", "Green Bean" }
+        ["Don't Buy"]   = {},                 -- e.g. { "Mango", "Coconut" }
+        ["Keep Seeds"]  = {
+            ["Dragon's Breath"] = 55, ["Moon Bloom"] = 54, ["Hypno Bloom"] = 55,
+            ["Gold"] = 55, ["Rainbow"] = 55, ["Mega"] = 55,
+       },
     },
     ["Money"] = {
         ["Keep Cash"]          = 15000,    -- always keep at least this much money
         ["Auto Expand Plot"]   = false,     -- buy plot expansions automatically
         ["Max Expansions"]     = 3,        -- cap how many expansions to auto-BUY this run. 0 = no limit; default 3 = stop after 3 (raise for a bigger plot)
-        ["Expand If Over"]     = 1500000,  -- only spend on an expansion when your cash is above this
+        ["Expand If Over"]     = 100000,  -- only spend on an expansion when your cash is above this
         ["Auto Replace Plants"] = true,    -- when the plot is full, dig up low-value plants and plant better ones
     },
     ["Never Sell"] = {                        -- protect fruit from being sold
@@ -33,19 +33,19 @@ _G.GAGConfig = _G.GAGConfig or {
         ["Exact"]       = {},                 -- e.g. { { fruit = "Carrot", mut = "Gold" } }
     },
     ["Pets"] = {
-        ["Buy"]            = { "Raccoon" },   -- list = tame UNLIMITED; OR caps { Robin = 6, Deer = 6 } = stop once you OWN N of that species; mix ok { "Unicorn", Deer = 6 }
-        ["Equip"]          = { Bunny = 6 },    -- e.g. { Deer = 4, Unicorn = 1 }  (name = how many)
-        ["Auto Buy Slots"] = true,            -- true / false
-        ["Max Pet Slots"]  = 4,               -- number 3..6
+        ["Buy"]            = { "Raccoon", "Big Unicorn"},   -- list = tame UNLIMITED; OR caps { Robin = 6, Deer = 6 } = stop once you OWN N of that species; mix ok { "Unicorn", Deer = 6 }
+        ["Equip"]          = { Deer = 6 },    -- e.g. { Deer = 4, Unicorn = 1 }  (name = how many)
+        ["Auto Buy Slots"] = false,            -- true / false
+        ["Max Pet Slots"]  = 3,               -- number 3..6
     },
     ["Gear"] = {
-        ["Auto Buy"]             = true,            -- true / false
+        ["Auto Buy"]             = false,            -- true / false
         ["Keep Cash"]            = 15000,           -- number
         ["Sprinkler Coverage"]   = "concentrate",   -- "concentrate" / "value" / "spread"
         ["Place Sprinklers"]     = { ["best"] = 4 },          -- e.g. { ["best"] = 4 } or { ["Rare Sprinkler"] = 2 }
-        ["Best Sprinkler Up To"] = "Uncommon Sprinkler",          -- "Common/Uncommon/Rare/Super/Legendary Sprinkler"
+        ["Best Sprinkler Up To"] = "Rare Sprinkler",          -- "Common/Uncommon/Rare/Super/Legendary Sprinkler"
         ["Keep Gear"]            = { ["Supersize Mushroom"] = 1 },   -- e.g. { ["Trowel"] = 1 }  (buy & hold N)
-        ["Buy Gear"]             = { "Super Sprinkler", "Super Watering Can" },   -- e.g. { "Trowel" }  (buy & keep, never placed)
+        ["Buy Gear"]             = { "Super Sprinkler", "Legendary Sprinkler" },   -- e.g. { "Trowel" }  (buy & keep, never placed)
     },
     ["Event Seeds"] = {
         ["Auto Claim"] = true,       -- automatically grab seed packs that drop during events
@@ -54,8 +54,8 @@ _G.GAGConfig = _G.GAGConfig or {
         ["Auto Claim"] = true,                -- true / false
         ["Send To"]    = "kewelyz",                  -- username to funnel items to ("" = off)
         ["Send"]       = {                    -- e.g. { "Gold", "Deer", { Item = "Deer", Count = 5 } }  (equipped pets never sent)
-            "Moon Bloom", "Dragon's Breath", { Item = "Gold", Count = 10 }, "Rainbow", "Mega", "Venom Spitter",
-            "Unicorn", "Raccoon",
+            "Moon Bloom", "Dragon's Breath", "Hypno Bloom", "Gold", "Rainbow", "Mega", 
+            "Deer", "GoldenDragonfly", "Big Unicorn", "Robin", "Raccoon", "Turtle",
             "Super Sprinkler", "Legendary Sprinkler", "Super Watering Can",
         },
     },
@@ -64,15 +64,13 @@ _G.GAGConfig = _G.GAGConfig or {
         ["Show Stats"]            = true,     -- true / false
         ["Show Console"]          = false,    -- true / false  (the left/right buy + shovel/plant feed panels; off by default so they don't crowd the stats on small screens — toggle live with the CONSOLE button)
         ["Smart Travel"]          = true,     -- true / false
-        ["Auto Daily Deal"]       = true,     -- true / false
+        ["Auto Daily Deal"]       = false,     -- true / false
         ["Walk Speed"]            = 35,       -- number 16..35  (travel speed; 30 = stable. Lower toward 25 if Fast Travel ever snaps you back)
-        ["Slide Speed"]           = 35,       -- number 10..150  (noclip SLIDE speed for Fast Travel excursions; default 30. Higher = faster but closer to the ~180/s anti-cheat snap ceiling)
         ["Fast Travel"]           = true,    -- true / false  (on = noclip-SLIDE travel: same speed at ANY fps; falls back to walking if yanked. off = plain walking)
-        ["Teleport"]              = true,   -- true / false  (on = grab pets + event seeds by TELEPORTING straight onto each one and fast-firing — much faster than slide/walk. Separate from Fast Travel)
     },
     ["Friends"] = {
-        ["Auto Accept"] = true,              -- true / false  (accept incoming friend requests from players in the server)
-        ["Auto Send"]   = true,              -- true / false  (send friend requests to players in the server — some accounts must be friends to mail/trade)
+        ["Auto Accept"] = false,              -- true / false  (accept incoming friend requests from players in the server)
+        ["Auto Send"]   = false,              -- true / false  (send friend requests to players in the server — some accounts must be friends to mail/trade)
     },
     ["Performance"] = {
         ["FPS Cap"]              = 30,        -- number (0 = uncapped; also the farm's logic/movement rate)
