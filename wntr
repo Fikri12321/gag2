@@ -9,8 +9,8 @@ _G.GAGConfig = _G.GAGConfig or {
     },
     ["Planting"] = {
         ["Auto Plant"]  = true,               -- true / false  (false = never buy/plant; also stops expand/replace)
-        ["Plant Plan"]  = { Gold = 150 },                 -- e.g. { Apple = 50, ["Dragon Fruit"] = 20 }  (keep N planted, then auto-fill)
-        ["Only Plant"]  = {"},                 -- e.g. { "Bamboo", "Apple" }  (plant ONLY these)
+        ["Plant Plan"]  = {},                 -- e.g. { Apple = 50, ["Dragon Fruit"] = 20 }  (keep N planted, then auto-fill)
+        ["Only Plant"]  = {},                 -- e.g. { "Bamboo", "Apple" }  (plant ONLY these)
         ["Minimum Seed"] = "Mushroom",                -- e.g. "Bamboo"  (never BUY/PLANT a seed cheaper than this tier — stops it filling with Carrot/Strawberry/Blueberry junk. "" = no floor, fill with anything)
         ["Layout"]      = "compact",          -- "compact" / "spread"
         ["Don't Plant"] = { Carrot", "Rainbow", "Mega", "Dragon's Breath", "Moon Bloom", "Hypno Bloom", "Strawberry", "Blueberry", "Tomato", "Apple", "Corn },                 -- e.g. { "Carrot", "Green Bean" }
