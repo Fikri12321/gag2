@@ -13,7 +13,7 @@ _G.GAGConfig = _G.GAGConfig or {
         ["Only Plant"]  = {},                 -- e.g. { "Bamboo", "Apple" }  (plant ONLY these)
         ["Minimum Seed"] = "Mushroom",                -- e.g. "Bamboo"  (never BUY/PLANT a seed cheaper than this tier — stops it filling with Carrot/Strawberry/Blueberry junk. "" = no floor, fill with anything)
         ["Layout"]      = "compact",          -- "compact" / "spread"
-        ["Don't Plant"] = { Carrot", "Rainbow", "Mega", "Dragon's Breath", "Moon Bloom", "Hypno Bloom", "Strawberry", "Blueberry", "Tomato", "Apple", "Corn },                 -- e.g. { "Carrot", "Green Bean" }
+        ["Don't Plant"] = { "Carrot", "Rainbow", "Mega", "Dragon's Breath", "Moon Bloom", "Hypno Bloom", "Strawberry", "Blueberry", "Tomato", "Apple", "Corn },                 -- e.g. { "Carrot", "Green Bean" }
         ["Don't Buy"]   = {},                 -- e.g. { "Mango", "Coconut" }
         ["Keep Seeds"]  = { "Rainbow", "Mega", "Dragon's Breath", "Moon Bloom", "Hypno Bloom" },
         ["Plant Limit"] = 150,                  -- number (0 = off). Cap TOTAL plants at this: never plant past it, AND if you're ALREADY over (e.g. 800), shovel the lowest-tier plants DOWN to it to cut lag / stop the game force-closing. Set ~200. Never shovels mutated (Gold/Rainbow/Mega), Mega-size, Plant-Plan or never-sell plants.
